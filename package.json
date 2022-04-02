@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h2Latte/portfolio.git"
+  },
+  "author": "hugo delatte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/h2Latte/portfolio/issues"
+  },
+  "homepage": "https://github.com/h2Latte/portfolio#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.4.1",
+    "parcel": "^2.4.1"
+  }
+}
