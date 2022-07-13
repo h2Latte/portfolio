@@ -1,0 +1,111 @@
+html {
+  background-color: #0d0d2b;
+  color: white;
+  font-family: Rubik, sans-serif;
+
+  body {
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: hidden;
+
+    .bar-color {
+      position: absolute;
+      width: 120px;
+      height: 997px;
+      left: 700px;
+      z-index: -100;
+      top: 0;
+      background: linear-gradient(
+        180.09deg,
+        rgba(255, 255, 255, 0) 0.49%,
+        rgba(255, 255, 255, 0.04) 39.06%,
+        rgba(255, 255, 255, 0) 99.92%
+      );
+      transform: rotate(-120deg);
+    }
+
+    .bar-color-2 {
+      @extend .bar-color;
+      left: 1000px;
+      top: 100px;
+    }
+
+    nav {
+      padding: 60px 120px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      section.nav-buttons {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        .vertical-bar {
+          width: 1px;
+          height: 30px;
+          background: #606060;
+        }
+        span.register-button {
+          background-color: #3671e9;
+          border-radius: 30px;
+          padding: 1rem;
+        }
+      }
+    }
+
+    main.hero-banner {
+      padding: 0 120px;
+      display: flex;
+      align-items: center;
+      section {
+        div.sales {
+          background: rgba(255, 255, 255, 0.1);
+          width: fit-content;
+          border-radius: 30px;
+          display: flex;
+          align-items: center;
+
+          span.sales-title {
+            background: white;
+            padding: 1rem;
+            border-radius: 30px;
+            color: black;
+          }
+
+          p {
+            padding: 0 1rem;
+          }
+        }
+
+        h1 {
+          font-size: 3rem;
+          margin: 24px 0;
+        }
+        & > p {
+          max-width: 430px;
+          margin: 0;
+        }
+
+        button {
+          margin-top: 32px;
+          background-color: #3671e9;
+          border-radius: 30px;
+          padding: 1rem;
+          border: none;
+          color: white;
+        }
+      }
+
+      img.illustration {
+        max-width: 50%;
+        width: 50%;
+        z-index: -1;
+        object-fit: contain;
+      }
+    }
+  }
+}
