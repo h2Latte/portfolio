@@ -84,6 +84,7 @@ body {
       object-fit: cover;
       height: 100%;
       z-index: -1;
+      will-change: transform;
     }
   }
 
@@ -130,5 +131,6 @@ body {
     align-items: center;
     justify-content: center;
     gap: 5px;
+    will-change: transform;
   }
 }

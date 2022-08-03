@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "futura";
+  src: url("/assets/fonts/futura.ttf");
+}
+
+@font-face {
+  font-family: "Iceberg";
+  src: url("/assets/fonts/Iceberg-Regular.ttf");
+}
+
+//@font-face {
+//  font-family: "Avenir";
+//  src: url("/assets/fonts/avenir_ff/AvenirLTSd-Book.otf");
+//}
+
+body {
+  background-color: black;
+  color: white;
+  position: relative;
+  margin: 0;
+  font-family: "Avenir", sans-serif;
+  font-weight: 400;
+
+  button,
+  span {
+    cursor: pointer;
+    &:hover {
+      color: #ffd6aa;
+      * {
+        color: #ffd6aa;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 230px;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, #0d0d0f 0%, rgba(13, 13, 15, 0) 100%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(#0d0d0f 0%, rgba(13, 13, 15, 0) 100%);
+  }
+
+  img.robot {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    z-index: -2;
+  }
+
+  nav {
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding: 2.5rem;
+    align-items: center;
+
+    span.title {
+      font-family: futura, sans-serif;
+      font-weight: 500;
+      font-size: 37px;
+    }
+  }
+
+  div.hero-banner {
+    margin-left: 4rem;
+    h1 {
+      font-family: "Iceberg", sans-serif;
+      font-weight: 400;
+      font-size: 70px;
+      line-height: 85px;
+      margin-bottom: 1rem;
+
+      background: linear-gradient(
+        175.79deg,
+        #ffd6aa 20.9%,
+        rgba(255, 132, 0, 0) 96.57%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      max-width: 500px;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 27px;
+    }
+    button {
+      background: linear-gradient(-0.4turn, white, #6c6c6c);
+      color: white;
+      font-family: "Avenir", sans-serif;
+      padding: 0;
+      border: none;
+      div {
+        margin: 1px;
+        padding: 0.5rem 3rem;
+        background: black;
+      }
+      &:hover {
+        background: linear-gradient(-0.4turn, #ffd6aa, #8f7a5f);
+      }
+    }
+  }
+
+  div.card {
+    position: relative;
+    backdrop-filter: blur(40px);
+    border: 1px solid white;
+    box-sizing: border-box;
+    height: 314px;
+    width: 785px;
+    padding: 4rem;
+    bottom: -100px;
+
+    img {
+      position: absolute;
+      left: 4rem;
+      top: -60px;
+    }
+
+    h2 {
+      font-family: "Iceberg", sans-serif;
+      font-weight: 400;
+      font-size: 50px;
+      margin: 0 0 0 200px;
+    }
+    button {
+      border: none;
+      background: none;
+      color: white;
+      font-family: "Avenir", sans-serif;
+      padding: 0.5rem 3rem;
+      &:disabled {
+        opacity: 0.4;
+      }
+    }
+  }
+}
