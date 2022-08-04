@@ -5,8 +5,9 @@
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "start": "parcel src/index.html",
+    "build": "parcel build",
+    "start-prod": "npx serve dist/index.html"
   },
   "repository": {
     "type": "git",
@@ -19,8 +20,12 @@
   },
   "homepage": "https://github.com/h2Latte/portfolio#readme",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.4.1",
-    "parcel": "^2.4.1",
+    "@parcel/transformer-sass": "2.7.0",
+    "parcel": "2.7.0",
     "prettier": "2.7.1"
+  },
+  "dependencies": {
+    "@parcel/compressor-brotli": "^2.7.0",
+    "@parcel/compressor-gzip": "^2.7.0"
   }
 }

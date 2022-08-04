@@ -20,7 +20,8 @@ body {
   margin: 0;
   font-family: "Avenir", sans-serif;
   font-weight: 400;
-
+  overflow-x: hidden;
+  min-height: 100vh;
   button,
   span {
     cursor: pointer;
@@ -51,15 +52,18 @@ body {
     left: 0;
     top: 0;
     z-index: -1;
-    background: linear-gradient(#0d0d0f 0%, rgba(13, 13, 15, 0) 100%);
+    background: linear-gradient(0.25turn, #000000 40%, rgba(255, 0, 0, 0));
+    //background: linear-gradient(0.25turn, red, rgba(255, 0, 0, 0));
   }
 
   img.robot {
     position: absolute;
     right: 0;
     top: 0;
-    height: 100%;
+    height: 100vh;
     z-index: -2;
+    animation: image-enter 1.5s ease-in-out;
+    will-change: transform;
   }
 
   nav {
@@ -78,7 +82,12 @@ body {
   }
 
   div.hero-banner {
+    will-change: transform;
     margin-left: 4rem;
+    transform: translate(-10%, 0);
+    opacity: 0;
+    animation: hero-banner-enter 1s ease-in-out forwards;
+    animation-delay: 1s;
     h1 {
       font-family: "Iceberg", sans-serif;
       font-weight: 400;
@@ -125,7 +134,11 @@ body {
     height: 314px;
     width: 785px;
     padding: 4rem;
-    bottom: -100px;
+    margin-top: 60px;
+    bottom: -80px;
+    opacity: 0;
+    animation: card-enter 1s ease-in-out forwards;
+    animation-delay: 1.5s;
 
     img {
       position: absolute;
@@ -140,6 +153,7 @@ body {
       margin: 0 0 0 200px;
     }
     button {
+      margin-top: 2rem;
       border: none;
       background: none;
       color: white;
@@ -149,5 +163,36 @@ body {
         opacity: 0.4;
       }
     }
+  }
+}
+
+@keyframes image-enter {
+  from {
+    transform: translate(50px, 50px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes hero-banner-enter {
+  from {
+    transform: translate(-10%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
